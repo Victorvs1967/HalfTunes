@@ -32,28 +32,28 @@ class HalfTunesSlowTests: XCTestCase {
     //    when
     let dataTask = sessionUnderTest.dataTask(with: url!) { data, response, error in
     //    then
-          if let error = error {
-            XCTFail("Error: \(error.localizedDescription)")
-            return
-          } else if let statusCode = (response as? HTTPURLResponse)?.statusCode {
-            if statusCode == 200 {
-              promise.fulfill()
-            } else {
-              XCTFail("Status code: \(statusCode)")
-            }
+        if let error = error {
+          XCTFail("Error: \(error.localizedDescription)")
+          return
+        } else if let statusCode = (response as? HTTPURLResponse)?.statusCode {
+          if statusCode == 200 {
+            promise.fulfill()
+          } else {
+            XCTFail("Status code: \(statusCode)")
           }
-    }
+        }
+  }
     dataTask.resume()
     waitForExpectations(timeout: 5, handler: nil)
   }
 
   func testCallToiTunesCompletes() {
-//    given
+    //  given
     let url = URL(string: "https://itune.apple.com/search?media=music&entity=song&term=abba")
     let promise = expectation(description: "Complation handler invoked")
     var statusCode: Int?
     var responseError: Error?
-//    when
+    //  when
     let dataTask = sessionUnderTest.dataTask(with: url!) { data, response, error in
       statusCode = (response as? HTTPURLResponse)?.statusCode
       responseError = error
@@ -61,16 +61,15 @@ class HalfTunesSlowTests: XCTestCase {
     }
     dataTask.resume()
     waitForExpectations(timeout: 5, handler: nil)
-//    then
+    //  then
     XCTAssertNil(responseError)
     XCTAssertEqual(statusCode, 200)
   }
 
   func testPerformanceExample() {
-      // This is an example of a performance test case.
-      self.measure {
-          // Put the code you want to measure the time of here.
-      }
+    // This is an example of a performance test case.
+    self.measure {
+        // Put the code you want to measure the time of here.
+    }
   }
-
 }
