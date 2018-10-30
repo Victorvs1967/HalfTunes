@@ -582,7 +582,7 @@
 				DEVELOPMENT_TEAM = T72DS9GRKF;
 				INFOPLIST_FILE = HalfTunes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.HalfTunes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vvs.HalfTunes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.2;
@@ -596,7 +596,7 @@
 				DEVELOPMENT_TEAM = T72DS9GRKF;
 				INFOPLIST_FILE = HalfTunes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.HalfTunes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vvs.HalfTunes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.2;
